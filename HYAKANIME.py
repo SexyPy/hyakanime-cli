@@ -57,10 +57,8 @@ class PARSER:
         ask = Prompt.ask(f"[underline]What anime are you looking for[/]")
         user_search = self.API.user_search(ask)
 
-        counter = 0
-        for user in user_search:
+        for counter, user in enumerate(user_search):
             print(f"[{counter}] {user['username']}")
-            counter += 1
 
     def parse_get_catalogue(self):
         pass
